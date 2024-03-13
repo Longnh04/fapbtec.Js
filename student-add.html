@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addstudent</title>
+    <link rel="stylesheet" href="./css/student-add.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/btec.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+<body>
+    <!-- đây là phần div lớn container của cả trang homepage -->
+    <div class="container">
+        <!-- Đây là phần div left của trang web, phần div nhỏ -->
+        <div class="div-main-left-small">
+            <a href="./index.html"><img src="./imgs/btec.svg" alt="logo"></a>
+
+            <div class="div-page-croll-left-main">
+                <div class="div-home">
+                    <a href="./homepage.html"><p><i class="fa-solid fa-snowflake"></i>Home</p></a>
+                </div>
+
+                <div class="div-View-Information-main">
+                    <p><i class="fa-solid fa-snowflake"></i>View Information</p>
+                </div>
+                <div class="div-child-view-Information-main">
+                    <ul>
+                        <a href="./student-view.html">
+                            <li><strong>></strong><i class="fa-solid fa-user"></i>Student</li>
+                        </a>
+                        <a href="#">
+                            <li><strong>></strong><i class="fa-solid fa-address-book"></i>Specialization</li>
+                        </a>
+                        <a href="#">
+                            <li><strong>></strong><i class="fa-solid fa-headphones-simple"></i>Class</li>
+                        </a>
+                        <a href="#">
+                            <li><strong>></strong><i class="fa-solid fa-paperclip"></i>Subject</li>
+                        </a>
+                        <a href="#">
+                            <li><strong>></strong><i class="fa-solid fa-table"></i>Score</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="div-Information-Management">
+                    <p><i class="fa-solid fa-snowflake"></i>Information Management</p>
+                </div>
+                <div class="div-child-Information-Management">
+                    <ul>
+                        <a href="#">
+                            <li><strong>></strong><i class="fa-solid fa-chalkboard-user"></i>Teacher Management</li>
+                        </a>
+                        <a href="#">
+                            <li><strong>></strong><i class="fa-solid fa-user-tie"></i>Student Management</li>
+                        </a>
+                        <a href="#">
+                            <li><strong>></strong><i class="fa-solid fa-paperclip"></i> Subject Management</li>
+                        </a>
+                        <a href="#">
+                            <li><strong>></strong><i class="fa-solid fa-receipt"></i> Mark Report</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="div-Reports">
+                    <p><i class="fa-solid fa-snowflake"></i></i>Reports</p>
+                </div>
+                <div class="div-child-Reports">
+                    <ul>
+                        <a href="#">
+                            <li><strong>></strong><i class="fa-solid fa-book-bookmark"></i>Student Feedback</li>
+                        </a>
+                        <a href="#">
+                            <li><strong>></strong><i class="fa-solid fa-question"></i>Q&A</li>
+                        </a>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Đây là phần div main right của trang web, phần div lớn -->
+        <!-- và nó cũng là bắt đầu của thanh nav -->
+        <div class="div-main-right-big">
+            <div class="nav-main">
+                <a href="#aboutus">About Us</a> |
+                <a href="#course">Courses Offered</a> |
+                <a href="#contactus">Help</a>
+
+                <div class="div-account">
+                    <a href="#"><i class="fa-solid fa-bell"></i></a>
+                    <a href="#"><img src="./imgs/username.svg" alt="username"></a>
+                </div>
+            </div>
+            <!-- Kết thúc phần nav, tiếp đến là phần div main right được chia làm 2 div nhỏ -->
+            <div class="div-child-right-big">
+                <div class="add_student_information">
+                    <h2>Add new Student's Information</h2>
+
+                    <label for="student_id">Student ID</label> <br>
+                    <input type="text" name="" id="student_id"> <br>
+
+                    <label for="student_name">Student full name</label><br>
+                    <input type="text" name="" id="student_name"><br>
+
+                    <label for="student_gender">Gender</label><br>
+                    <select name="" id="student_gender">
+                        <option value="">Male</option>
+                        <option value="">Fe male</option>
+                    </select><br>
+
+                    <label for="student_birth">Date of birth</label><br>
+                    <input type="date" name="" id="student_birth"><br>
+
+                    <label for="student_address">Address</label><br>
+                    <input type="text" name="" id="student_address"><br>
+
+                    <label for="student_phone">Phone number</label><br>
+                    <input type="number" name="" id="student_phone"><br>
+
+                    <label for="student_email">Email Address</label><br>
+                    <input type="text" name="" id="student_email"><br>
+
+                    <label for="student_specialization">Specialization</label><br>
+                    <select name="" id="student_specialization">
+                        <option value="">Information Technology</option>
+                        <option value="">Business administration</option>
+                        <option value="">Graphic design</option>
+                    </select><br>
+
+                    <label for="student_class">Class</label><br>
+                    <input type="text" name="" id="student_class"><br>
+
+                    <button id="add_student" onclick="Addstudent()">Add new Student</button>
+                    <button id="cancel">Cancel</button>
+                </div>
+            </div>
+            <!-- Đây sẽ là bắt đầu cho phần footer -->
+            <div class="div-footer">
+                <p>For more information or any queries, please contact: FPT Polytechnic International in Hanoi</p>
+
+                <ul class="ul-footer">
+                    <li><i class="fa-solid fa-location-dot"></i> Address: Số 66 Võ Văn Tần, Quận Thanh Khê, Đà Nẵng.
+                    </li>
+                    <li><i class="fa-solid fa-envelope"></i> Email: Academic Department:
+                        <span>Academic.btec.dn@fe.edu.vn</span>
+                    </li>
+                    <li><i class="fa-solid fa-phone-volume"></i> Hotline: 024 730 99 588</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
+<script src="./js/add-student.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,455 @@
+/* Reset css của toàn bộ trang web */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* css phần body tổng quan */
+body {
+    font-family: 'Kanit', sans-serif;
+
+}
+
+:root {
+    --text-color-main: #000000;
+    --text-color-highlight: rgb(255, 136, 0);
+    --boder-color-dashed: #a5a4a4;
+    --background-color-light: #ffffff;
+    --background-color-xam: #e4d7d7;
+    --background-color-xam-light: rgba(0, 0, 0, 0.1);
+    --background-color-xam-lighter: #ebebeb;
+    --background-color-green: rgb(8, 226, 99);
+    --background-color-blue: rgb(111, 183, 250);
+}
+
+/* Đây là phần div tổng của trang web qlsv */
+.container {
+    display: flex;
+
+}
+
+/* đây là phần css div nhỏ bên trái của trang home page */
+.div-main-left-small {
+    width: 20%;
+    height: 100%;
+    overflow: scroll;
+    position: fixed;
+    padding: 10px;
+
+    img {
+        max-width: 85%;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    /* đây là phần div croll bên phía trái của webpage */
+    .div-page-croll-left-main {
+        padding-top: 20px;
+
+        .div-home {
+            width: 100%;
+            background-color: var(--background-color-xam-light);
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+
+            a {
+                text-decoration: none;
+                color: var(--text-color-main);
+            }
+
+            i {
+                padding-right: 10px;
+
+            }
+
+            p {
+                padding: 5px;
+                font-weight: bold;
+            }
+        }
+
+        .div-View-Information-main {
+            width: 100%;
+            background-color: var(--background-color-xam-light);
+            border-radius: 5px;
+            padding-left: 10px;
+
+            i {
+                padding-right: 10px;
+            }
+
+            p {
+
+                padding: 5px;
+                font-weight: bold;
+            }
+        }
+
+        .div-child-view-Information-main {
+            ul {
+                li {
+                    list-style-type: none;
+                    padding: 5px;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: translateX(4px);
+                        transition: 0.1s ease-in;
+
+                    }
+
+                    i {
+                        padding-right: 5px;
+                        padding-left: 5px;
+                        color: var(--text-color-highlight);
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: var(--text-color-main);
+                }
+            }
+
+        }
+
+        .div-Information-Management {
+            width: 100%;
+            background-color: var(--background-color-xam-light);
+            border-radius: 5px;
+            padding-left: 10px;
+
+            i {
+                padding-right: 10px;
+            }
+
+            p {
+                padding: 5px;
+                font-weight: bold;
+            }
+        }
+
+        .div-child-Information-Management {
+
+            ul {
+                li {
+                    list-style-type: none;
+                    padding: 5px;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: translateX(4px);
+                        transition: 0.1s ease-in;
+
+                    }
+
+                    i {
+                        padding-right: 5px;
+                        padding-left: 5px;
+                        color: var(--text-color-highlight);
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: var(--text-color-main);
+                }
+            }
+
+        }
+
+        .div-Reports {
+            width: 100%;
+            background-color: var(--background-color-xam-light);
+            border-radius: 5px;
+            padding-left: 10px;
+
+            i {
+                padding-right: 10px;
+            }
+
+            p {
+                padding: 5px;
+                font-weight: bold;
+            }
+
+        }
+
+        .div-child-Reports {
+            ul {
+                li {
+                    list-style-type: none;
+                    padding: 5px;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: translateX(4px);
+                        transition: 0.1s ease-in;
+                    }
+
+                    i {
+                        padding-right: 5px;
+                        padding-left: 5px;
+                        color: var(--text-color-highlight);
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    color: var(--text-color-main);
+                }
+            }
+        }
+    }
+}
+
+/* đây là phần css div lớn bên phải của trang home page*/
+
+.div-main-right-big {
+    width: 80%;
+    height: 100%;
+    background-color: #FDF8EE;
+    position: fixed;
+    overflow: scroll;
+    right: 0px;
+
+    .nav-main {
+        background-color: #f7f7f7;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+
+        a {
+            padding: 10px;
+            color: var(--text-color-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: var(--text-color-highlight);
+                margin-top: -10px;
+                transition: 0.4s ease;
+                text-decoration: underline;
+
+            }
+        }
+
+        .div-account {
+            position: relative;
+            right: -60%;
+            display: flex;
+
+            i {
+                font-size: 28px;
+            }
+
+            img {
+                width: 28px;
+            }
+        }
+    }
+
+}
+
+
+/* Đây là phần div nhỏ được chia bên trái */
+.div-child-right-big-left {
+    width: 50%;
+    padding: 40px;
+
+    h1 {
+        font-size: 45px;
+        font-weight: bold;
+    }
+}
+
+
+/* đây là phần css cho form student-viewwww nè */
+
+.div-card-right-cover {
+    background-color: var(--background-color-xam-lighter);
+    height: 500px;
+    padding: 30px;
+
+    .div-card-main-header {
+        display: flex;
+        justify-content: space-between;
+        transition: .3s ease-in-out;
+
+        a {
+            text-decoration: none;
+        }
+
+        button {
+            padding: 13px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            background-color: var(--background-color-green);
+            color: var(--background-color-light);
+            font-weight: bold;
+            border: none;
+            /* border-radius: 5px; */
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--background-color-blue);
+                transform: scale(1.01);
+                transition: 0.3s ease;
+            }
+
+        }
+    }
+
+    .div-card-main {
+        background-color: var(--background-color-light);
+        padding: 20px;
+        width: 100%;
+
+        /* border-radius: 10px; */
+        .div-search {
+            padding-top: 20px;
+
+
+            input {
+                margin-right: 10px;
+                width: 200px;
+                padding: 10px;
+                font-size: 15px;
+                outline: none;
+                border: none;
+                border-bottom: 2px solid var(--boder-color-dashed);
+                font-family: 'Kanit', sans-serif !important;
+            }
+
+            input:focus {
+                box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
+                outline: none;
+                border-bottom: none;
+            }
+
+            button {
+                padding: 5px;
+                width: 80px;
+                margin-right: 10px;
+                cursor: pointer;
+                font-weight: bold;
+
+            }
+
+            .btn-search {
+                background-color: var(--background-color-green);
+                border: none;
+                color: var(--background-color-light);
+
+                &:hover {
+                    transform: translateY(-2px);
+                    transition: 0.3s ease;
+                }
+            }
+
+            .btn-reset {
+                background-color: var(--background-color-blue);
+                border: none;
+                color: var(--background-color-light);
+
+                &:hover {
+                    transform: translateY(-2px);
+                    transition: 0.3s ease;
+
+                }
+            }
+        }
+
+        /* ddaay là phần bắt đầu cho div thông tin của sinh viên đã có trong data */
+
+        .div-student-infor {
+
+            /* Định dạng cho bảng */
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+
+            /* Định dạng cho các ô tiêu đề cột */
+            th {
+                background-color: var(--background-color-xam-lighter);
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            /* Định dạng cho các ô dữ liệu cột */
+            td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+
+                i {
+                    justify-content: center;
+                    align-items: center;
+                    margin: 0 auto;
+                    padding: 5px;
+                    cursor: pointer;
+                    text-align: center;
+
+                    &:hover {
+                        color: var(--text-color-highlight);
+                        /* transform: translateY(-2px); */
+                        transition: 0.3s ease;
+                    }
+                }
+
+                .div-td-flex {
+                    display: flex;
+                }
+
+            }
+
+        }
+
+
+
+
+    }
+
+
+}
+
+
+
+/* Đây sẽ là phần css bắt đầu cho footerrr */
+
+.div-footer {
+    background-color: var(--background-color-light);
+    border-top: 3px solid var(--boder-color-dashed);
+    padding-bottom: 30px;
+
+    .ul-footer {
+        padding-left: 50px;
+
+        li {
+            list-style: none;
+            margin-bottom: 10px;
+
+            i {
+                padding-right: 10px;
+                color: var(--text-color-highlight);
+            }
+
+            span {
+                color: var(--text-color-highlight);
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+        padding: 20px;
+    }
+}

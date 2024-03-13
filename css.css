@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* css phần body tổng quan */
+body {
+    font-family: 'Kanit', sans-serif;
+
+}
+
+:root {
+    --text-color-main: #000000;
+    --text-color-highlight: rgb(255, 136, 0);
+    --boder-color-dashed: #a5a4a4;
+    --background-color-light: #ffffff;
+    --background-color-xam: #e4d7d7;
+    --background-color-xam-light: rgba(0, 0, 0, 0.1);
+}
+
+
+
+.div-flex-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .div-flex-child-left {
+        width: 50%;
+        height: 100vh;
+        padding: 50px;
+
+        h3{
+            color: var(--boder-color-dashed);
+        }
+        .div-logo-flex{
+            padding-top: 30px;
+        }
+       /* đây là div cho phần options */
+        .div-btn-options{
+            display: flex;
+            gap: 15px;
+            padding-top: 20px;
+
+
+            button{
+                width: 50%;
+                padding: 10px;
+                cursor: pointer;
+                font-size: 16px;
+                font-family: 'Kanit', sans-serif !important;
+                border: 0.5px solid var(--boder-color-dashed);
+            }
+            button:focus{
+                background-color: var(--text-color-highlight);
+            }
+        }
+       /* ddây là phần div cho phần input  */
+        .div-login-input{
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+
+            input{
+                margin-top: 10px;
+                padding: 10px;
+                font-family: 'Kanit', sans-serif !important;
+                font-size: 16px;
+                border: none;
+                outline: none;
+                border-bottom: 2px solid var(--boder-color-dashed);
+            }
+            
+            input:focus{
+                outline: none;
+                box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+                border: none;
+            }
+
+
+
+
+
+            /* đây là phần btn login click  */
+            button{
+                padding: 10px;
+                margin-top: 15px;
+                font-family: 'Kanit', sans-serif !important;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 30px;
+                border: none;
+                font-weight: bold;
+                &:hover{
+                    transform: scale(1.01);
+                    transition: 0.3s ease;
+                    border: 0.3px solid var(--boder-color-dashed);
+                }
+            }
+        }
+
+        /* đây là phần css của btn sign in with admin   */
+        .div-btn-admin{
+            margin-top: 10px;
+
+            button{
+                padding: 10px;
+                width: 100%;
+                cursor: pointer;
+                font-family: 'Kanit', sans-serif !important;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 30px;
+                border: none;
+                background-color: var(--text-color-highlight);
+                color: var(--background-color-light);
+                font-weight: bold;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                &:hover{
+                    transform: scale(1.01);
+                    transition: 0.3s ease;
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+    .div-flex-child-right {
+        background-color: var(--text-color-highlight);
+        width: 50%;
+        height: 100vh;
+        position: relative;
+        align-items: center;
+      
+        h1{
+            text-align: center;
+            padding: 30px;
+            color: var(--background-color-light);
+        }
+
+        .div-flex-child-right-cycle {
+            background-color: var(--background-color-light);
+            margin: 0 auto;
+            width: 70%;
+            height: 70%;
+            border-radius: 50%;
+            z-index: 0;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+
+            .div-flex-child-right-banner {
+                position: absolute;
+                bottom: 10px;
+
+                img {
+                    width: 500px;
+
+                }
+            }
+
+        }
+
+
+    }
+
+
+
+
+}

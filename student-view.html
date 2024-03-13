@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fap.btec-academic</title>
+  <link rel="stylesheet" href="./css/student-view.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="imgs/btec.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <!-- đây là phần div lớn container của cả trang homepage -->
+  <div class="container">
+    <!-- Đây là phần div left của trang web, phần div nhỏ -->
+    <div class="div-main-left-small">
+      <a href="./index.html"><img src="./imgs/btec.svg" alt="logo"></a>
+
+      <div class="div-page-croll-left-main">
+        <div class="div-home">
+          <a href="./homepage.html">
+            <p><i class="fa-solid fa-snowflake"></i>Home</p>
+          </a>
+        </div>
+
+        <div class="div-View-Information-main">
+          <p><i class="fa-solid fa-snowflake"></i>View Information</p>
+        </div>
+        <div class="div-child-view-Information-main">
+          <ul>
+            <a href="#">
+              <li><strong>></strong><i class="fa-solid fa-user"></i>Student</li>
+            </a>
+            <a href="#">
+              <li><strong>></strong><i class="fa-solid fa-address-book"></i>Specialization</li>
+            </a>
+            <a href="#">
+              <li><strong>></strong><i class="fa-solid fa-headphones-simple"></i>Class</li>
+            </a>
+            <a href="#">
+              <li><strong>></strong><i class="fa-solid fa-paperclip"></i>Subject</li>
+            </a>
+            <a href="#">
+              <li><strong>></strong><i class="fa-solid fa-table"></i>Score</li>
+            </a>
+          </ul>
+        </div>
+        <div class="div-Information-Management">
+          <p><i class="fa-solid fa-snowflake"></i>Information Management</p>
+        </div>
+        <div class="div-child-Information-Management">
+          <ul>
+            <a href="#">
+              <li><strong>></strong><i class="fa-solid fa-chalkboard-user"></i>Teacher Management</li>
+            </a>
+            <a href="./student-add.html">
+              <li><strong>></strong><i class="fa-solid fa-user-tie"></i>Student Management</li>
+            </a>
+            <a href="#">
+              <li><strong>></strong><i class="fa-solid fa-paperclip"></i> Subject Management</li>
+            </a>
+            <a href="#">
+              <li><strong>></strong><i class="fa-solid fa-receipt"></i> Mark Report</li>
+            </a>
+          </ul>
+        </div>
+        <div class="div-Reports">
+          <p><i class="fa-solid fa-snowflake"></i></i>Reports</p>
+        </div>
+        <div class="div-child-Reports">
+          <ul>
+            <a href="#">
+              <li><strong>></strong><i class="fa-solid fa-book-bookmark"></i>Student Feedback</li>
+            </a>
+            <a href="#">
+              <li><strong>></strong><i class="fa-solid fa-question"></i>Q&A</li>
+            </a>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Đây là phần div main right của trang web, phần div lớn -->
+    <!-- và nó cũng là bắt đầu của thanh nav -->
+    <div class="div-main-right-big">
+      <div class="nav-main">
+        <a href="#aboutus">About Us</a> |
+        <a href="#course">Courses Offered</a> |
+        <a href="#contactus">Help</a>
+
+        <div class="div-account">
+          <a href="#"><i class="fa-solid fa-bell"></i></a>
+          <a href="#"><img src="./imgs/username.svg" alt="username"></a>
+        </div>
+      </div>
+      <!-- Kết thúc phần nav, tiếp đến là phần div main right trong page student-view -->
+      <div class="div-card-right-cover">
+        <!-- Bây giờ tôi sẽ tạo một div lớn card để có thể chứa những thông tin đó -->
+        <div class="div-card-main">
+          <div class="div-card-main-header">
+            <h2>Student Information</h2>
+            <!-- a button add start here -->
+            <!-- onclick="location.href='student_add.php'" >> can thi dung nha -->
+            <a href="./student-add.html"><button class="btn-add-new-student" type="button" id="btn-add-new-student"
+                function="Addstudent">Add a new
+                student</button></a>
+          </div>
+
+
+          <div class="div-search">
+            <input class="input" id="input1" type="text" placeholder="Student name">
+            <input class="input" id="input2" type="text" placeholder="Class">
+            <input class="input" id="input3" type="text" placeholder="Specialization">
+            <button class="btn-search" onclick="Search()">Search</button>
+            <button class="btn-reset" onclick="ResetInputs()">Reset</button>
+          </div>
+
+          <div class="div-student-infor">
+
+            <table>
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Student ID</th>
+                  <th>Student Name</th>
+                  <th>Date of Birth</th>
+                  <th>Class</th>
+                  <th>Specialization</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- Dữ liệu mẫu -->
+                <tr>
+                  <td>1</td>
+                  <td>BD00361</td>
+                  <td>Nguyen Hoang Long</td>
+                  <td>1990-01-01</td>
+                  <td>SE06202</td>
+                  <td>Information Technology</td>
+                  <td>
+                    <div class="div-td-flex">
+                      <div class="div-td-items" id="view-student"><i class="fa-solid fa-eye"></i></div>
+                      <div class="div-td-items" id="change-student"><i class="fa-solid fa-pen-to-square"></i></div>
+                      <div class="div-td-items" id="delete-student"><i class="fa-solid fa-trash"></i></div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>BD00345</td>
+                  <td>Ngo Nguyen Nhat Linh</td>
+                  <td>1992-05-15</td>
+                  <td>SE06202</td>
+                  <td>Information Technology</td>
+                  <td>
+                    <div class="div-td-flex">
+                      <div class="div-td-items" id="view-student"><i class="fa-solid fa-eye"></i></div>
+                      <div class="div-td-items" id="change-student"><i class="fa-solid fa-pen-to-square"></i></div>
+                      <div class="div-td-items" id="delete-student"><i class="fa-solid fa-trash"></i></div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Đây sẽ là bắt đầu cho phần footer -->
+      <div class="div-footer">
+        <p>For more information or any queries, please contact: FPT Polytechnic International in Hanoi</p>
+
+        <ul class="ul-footer">
+          <li><i class="fa-solid fa-location-dot"></i> Address: Số 66 Võ Văn Tần, Quận Thanh Khê, Đà Nẵng.</li>
+          <li><i class="fa-solid fa-envelope"></i> Email: Academic Department: <span>Academic.btec.dn@fe.edu.vn</span>
+          </li>
+          <li><i class="fa-solid fa-phone-volume"></i> Hotline: 024 730 99 588</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <script src="./main.js">
+
+  </script>
+
+</body>
+
+</html>
